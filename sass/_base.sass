@@ -2,7 +2,7 @@
 @import compass/css3/user-interface
 
 $font-family      : "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, "微软雅黑", "宋体", sans-serif
-$font-color       : #333
+$font-color       : #000
 $link-color       : #555
 $link-color-hover : $font-color
 
@@ -37,9 +37,9 @@ a, a:link a:visited
 a:active, a:hover
     color: $link-color-hover
 
-input
-    font-family: $font-family
-    font-size: 10px
+input, textarea, select
+    font-family: inherit
+    font-size: inherit
 
     +placeholder
         color: #555
@@ -52,9 +52,3 @@ li
     list-style: none
 img
     border: none
-
-.eleIcon_30
-    width: 30px
-    height: 30px
-    background: url(../image/eleIcon_30@2x.png) no-repeat
-    background-size: 300px auto

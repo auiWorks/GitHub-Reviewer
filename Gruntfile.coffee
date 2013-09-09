@@ -11,8 +11,7 @@ module.exports = (grunt) ->
                     fontsDir  : 'me/font'
 
                     environment : 'production'
-                    # outputStyle : 'compressed'
-                    outputStyle : 'expanded'
+                    outputStyle : 'compressed'
 
         coffee :
             dist :
@@ -45,7 +44,7 @@ module.exports = (grunt) ->
                 ]
                 tasks : [
                     'coffee'
-                    # 'uglify'
+                    'uglify'
                 ]
 
     grunt.loadNpmTasks 'grunt-contrib-compass'

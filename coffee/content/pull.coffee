@@ -1,6 +1,6 @@
 chrome.storage.sync.get 'setting', (items) ->
     setting  = items['setting'] || {}
-    patterns = typeof setting['autoFoldPatterns'] !== 'undefined' ? setting['autoFoldPatterns'] : ''
+    patterns = if typeof setting['autoFoldPatterns'] is 'undefined' then '' else setting['autoFoldPatterns']
     patterns = patterns.split '\n'
     
     autoFoldPatterns = []
