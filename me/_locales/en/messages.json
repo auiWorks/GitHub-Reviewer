@@ -1,0 +1,20 @@
+{
+    "appName" : {
+        "message"     : "GitHub Folder",
+        "description" : "The title of the application, displayed in the web store."
+    },
+    "appDesc" : {
+        "message"     : "Fold files in GitHub Pull Request's \"Files Changed\" at your preference.", 
+        "description" : "The description of the application, displayed in the web store."
+    },
+    "github_fork" : {
+        "message"     : "Fork me on GitHub"
+    },
+    "settings" : {
+        "message"     : "Settings"
+    },
+    "settings_autoFoldPatterns" : {
+        "message"     : "Auto fold file matches one of these patterns (one RegExp per line):"
+    }
+}
+
