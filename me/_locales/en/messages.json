@@ -13,6 +13,15 @@
     "settings" : {
         "message"     : "Settings"
     },
+    "settings_account" : {
+        "message"     : "Github Account:"
+    },
+    "settings_username" : {
+        "message"     : "username"
+    },
+    "settings_password" : {
+        "message"     : "password"
+    },
     "settings_autoFoldPatterns" : {
         "message"     : "Auto fold file matches one of these patterns (one RegExp per line):"
     }

@@ -25,7 +25,7 @@ module.exports = (grunt) ->
             dist :
                 expand  : true
                 cwd     : 'me/script/'
-                src     : [ '**/*.js' ]
+                src     : [ '**/*.js', '!**/*.min.js' ]
                 dest    : 'me/script/'
                 ext     : '.js'
 

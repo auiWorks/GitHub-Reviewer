@@ -6,7 +6,10 @@ C =
         chrome.storage.sync.get 'setting', (items) ->
             C.stack = items['setting'] || {}
 
-            C.$fields = document.getElementsByTagName 'textarea';
+            C.$fields = []
+            for tagName in [ 'textarea', 'input' ]
+                eles = document.getElementsByTagName tagName
+                C.$fields.push ele for ele in eles
 
             for $field in C.$fields
                 C.recover.call $field
