@@ -16,18 +16,31 @@ h2
 
 .item
     margin: 15px 30px
-    line-height: 20px
 
-    > textarea
+    > .title
+        font-size: 1.2em
+        line-height: 2
+
+    > .dsc
+        color: #999
+
+    > input, textarea
         +box-sizing(border-box)
         display: block
         margin: .5em 0
+        border: 1px #ccc solid
+        +border-radius(5px)
+
+    > input
+        width: 200px
+        line-height: 2.4
+        padding: 0 .7em
+
+    > textarea
         width: 100%
         min-height: 200px
         padding: 1em
-        border: 1px #ccc solid
         resize: vertical
-        +border-radius(5px)
 
 .logo
     margin-top: 100px

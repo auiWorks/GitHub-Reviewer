@@ -1,6 +1,7 @@
 node_modules
-me/script
-me/style
+*.js
+!*.min.js
+*.css
 .sass-cache
 
 .DS_Store

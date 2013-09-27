@@ -13,6 +13,10 @@ module.exports = (grunt) ->
                     environment : 'production'
                     outputStyle : 'compressed'
 
+                    require : [
+                        'animation'
+                    ]
+
         coffee :
             dist :
                 expand  : true
@@ -25,7 +29,7 @@ module.exports = (grunt) ->
             dist :
                 expand  : true
                 cwd     : 'me/script/'
-                src     : [ '**/*.js' ]
+                src     : [ '**/*.js', '!**/*.min.js' ]
                 dest    : 'me/script/'
                 ext     : '.js'
 
