@@ -7,7 +7,7 @@
         "128" : "image/icon128.png"
     },
 
-    "version"                : "0.0.2",
+    "version"                : "0.0.3",
     "minimum_chrome_version" : "22",
 
     "options_page" : "settings.html",
@@ -16,7 +16,10 @@
         {
             "matches" : [ "*://github.com/*/pull/*" ],
             "css"     : [ "style/content/pull.css" ],
-            "js"      : [ "script/content/pull.js" ],
+            "js"      : [
+                "script/lib/jquery.min.js",
+                "script/content/pull.js"
+            ],
             "run_at"  : "document_end"
         }
     ],

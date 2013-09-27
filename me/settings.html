@@ -14,8 +14,15 @@
 
 <h2 i18n-content="settings"></h2>
 <div class="item">
-    <div i18n-content="settings_autoFoldPatterns"></div>
-    <textarea name="autoFoldPatterns"></textarea>
+    <div class="title" i18n-content="settings_account"></div>
+    <div class="dsc" i18n-content="settings_account_dsc"></div>
+    <input type="text" name="username" d-type="local" i18n-attr="placeholder:settings_username" />
+    <input type="password" name="password" d-type="local" i18n-attr="placeholder:settings_password" />
+</div>
+<div class="item">
+    <div class="title" i18n-content="settings_autoFoldPatterns"></div>
+    <div class="dsc" i18n-content="settings_autoFoldPatterns_dsc"></div>
+    <textarea name="autoFoldPatterns" d-type="sync"></textarea>
 </div>
 
 <div class="logo"></div>
