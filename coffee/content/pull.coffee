@@ -3,6 +3,7 @@ chrome.storage.sync.get 'setting', (items) ->
     setting = items['setting'] || {}
 
     C.fold.init()
+    C.stick.init()
     C.labels.init()
 
 
@@ -57,6 +58,34 @@ C.fold =
         me.autoFoldPatterns = []
         for pattern in patterns
             me.autoFoldPatterns.push new RegExp(pattern) unless /^\s*$/.test pattern
+
+
+C.stick = 
+    $elements : [
+        '.discussion-sidebar'
+        '.repository-sidebar'
+    ],
+
+    init : () ->
+        me = C.stick
+
+        for i, selector of me.$elements
+            $ele            = $(selector)
+            $ele.offsetTop  = $ele.offset().top - 20
+            me.$elements[i] = $ele
+
+        $(window).on 'scroll', me.check
+
+    check : () ->
+        me = C.stick
+
+        st = $(window).scrollTop()
+
+        for $ele in me.$elements
+            if st > $ele.offsetTop
+                $ele.addClass 'github-folder--stick'
+            else
+                $ele.removeClass 'github-folder--stick'
 
 
 C.labels =

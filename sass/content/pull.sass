@@ -14,6 +14,20 @@
             > :not(.meta)
                 display: none!important
 
+
+@mixin stick
+    position: fixed
+    top: 20px
+    left: 50%
+
+.repository-sidebar.github-folder--stick
+    +stick
+    margin-left: 452px
+.discussion-sidebar.github-folder--stick
+    +stick
+    margin-left: 330px
+
+
 .github-folder-blockLabels
     overflow-y: auto
     max-height: 500px
