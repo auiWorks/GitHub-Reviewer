@@ -1,10 +1,16 @@
-setting = {}
-chrome.storage.sync.get 'setting', (items) ->
-    setting = items['setting'] || {}
+setting =
+    local : {}
+    sync  : {}
 
-    C.fold.init()
-    C.stick.init()
-    C.labels.init()
+chrome.storage.local.get 'setting', (items) ->
+    setting.local = items['setting'] || {}
+
+    chrome.storage.sync.get 'setting', (items) ->
+        setting.sync = items['setting'] || {}
+
+        C.fold.init()
+        C.stick.init()
+        C.labels.init()
 
 
 helper = {}
@@ -20,11 +26,14 @@ helper.params = (key) ->
 
     arguments.callee.stack[key]
 
+helper.isGitHubAccountSet = () ->
+    setting.local['username'] and setting.local['password']
+
 helper.api = (options) ->
-    return unless setting['username'] and setting['password']
+    return unless helper.isGitHubAccountSet()
 
     options.url     = 'https://api.github.com' + options.url
-    options.headers = { Authorization : 'Basic ' + window.btoa "#{setting['username']}:#{setting['password']}" }
+    options.headers = { Authorization : 'Basic ' + window.btoa "#{setting.local['username']}:#{setting.local['password']}" }
     $.ajax options
 
 
@@ -52,7 +61,7 @@ C.fold =
     initAutoFoldPatterns : () ->
         me = C.fold
 
-        patterns = if typeof setting['autoFoldPatterns'] is 'undefined' then '' else setting['autoFoldPatterns']
+        patterns = if typeof setting.sync['autoFoldPatterns'] is 'undefined' then '' else setting.sync['autoFoldPatterns']
         patterns = patterns.split '\n'
 
         me.autoFoldPatterns = []
@@ -94,6 +103,8 @@ C.labels =
 
     init : () ->
         me = C.labels
+
+        return unless helper.isGitHubAccountSet()
 
         me.createBlockLabels()
         me.retriveAllLabels()
