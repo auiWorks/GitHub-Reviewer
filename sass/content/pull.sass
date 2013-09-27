@@ -1,3 +1,6 @@
+@import compass
+@import animation
+
 #files
     .file
         .meta
@@ -10,3 +13,36 @@
                 border-bottom: none!important
             > :not(.meta)
                 display: none!important
+
+.github-folder-blockLabels
+    overflow-y: auto
+    max-height: 500px
+
+    > li
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        margin: .5em 0
+        padding: 0 .5em
+        line-height: 2.2
+        font-size: 12px
+        font-weight: bold
+        background: #eee
+        border-left: .5em solid
+        border-radius: 3px
+        list-style-type: none
+        cursor: pointer
+        opacity: .3
+        +transition(opacity .2s linear)
+
+        &:hover, &.active
+            opacity: 1
+
+        &.loading
+            +animation(github-folder-breathing 2s infinite)
+
++keyframes(github-folder-breathing)
+    0%, 100%
+        opacity: 1
+    50%
+        opacity: .1

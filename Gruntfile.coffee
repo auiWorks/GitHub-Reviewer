@@ -13,6 +13,10 @@ module.exports = (grunt) ->
                     environment : 'production'
                     outputStyle : 'compressed'
 
+                    require : [
+                        'animation'
+                    ]
+
         coffee :
             dist :
                 expand  : true
