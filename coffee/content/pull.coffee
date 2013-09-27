@@ -98,8 +98,9 @@ C.stick =
 
 
 C.labels =
-    allLabels    : []
-    activeLabels : []
+    allLabels     : []
+    activeLabels  : []
+    hasPermission : true
 
     init : () ->
         me = C.labels
@@ -166,6 +167,9 @@ C.labels =
 
     toggleLabel : () ->
         me    = C.labels
+
+        return unless me.hasPermission
+
         $this = $(this)
 
         name = $this.attr 'name'
@@ -184,6 +188,9 @@ C.labels =
             success  : (d) ->
                 me.activeLabels = d
                 me.render()
+            error    : (d) ->
+                me.hasPermission = false
+                me.render()
 
     removeLabel : (name) ->
         me = C.labels
@@ -196,4 +203,7 @@ C.labels =
             dataType : 'json'
             success  : (d) ->
                 me.activeLabels = d
+                me.render()
+            error    : (d) ->
+                me.hasPermission = false
                 me.render()
