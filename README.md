@@ -11,6 +11,8 @@ Features
 
 * Fold/expand files in GitHub Pull Request's "Files Changed"
 * Auto fold file which matches patterns defined
+* Sidebar sticks to window top when scrolling
+* Label Management in Pull Request pages
 
 Usage
 -----
