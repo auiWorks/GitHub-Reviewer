@@ -92,9 +92,9 @@ C.stick =
 
         for $ele in me.$elements
             if st > $ele.offsetTop
-                $ele.addClass 'github-folder--stick'
+                $ele.addClass 'github-reviewer--stick'
             else
-                $ele.removeClass 'github-folder--stick'
+                $ele.removeClass 'github-reviewer--stick'
 
 
 C.labels =
@@ -120,7 +120,7 @@ C.labels =
         me.$sidebar.append '<hr />'
         me.$sidebar.append '<strong>Labels</strong>'
 
-        me.$blockLabels = $('<ul class="github-folder-blockLabels"></ul>')
+        me.$blockLabels = $('<ul class="github-reviewer-blockLabels"></ul>')
         me.$sidebar.append me.$blockLabels
 
     retriveAllLabels : () ->
