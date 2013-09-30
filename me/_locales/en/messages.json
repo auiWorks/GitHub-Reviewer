@@ -4,7 +4,7 @@
         "description" : "The title of the application, displayed in the web store."
     },
     "appDesc" : {
-        "message"     : "Fold files in GitHub Pull Request's \"Files Changed\" at your preference.", 
+        "message"     : "Make code review easier in GitHub.", 
         "description" : "The description of the application, displayed in the web store."
     },
     "github_fork" : {
