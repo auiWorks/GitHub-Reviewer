@@ -1,4 +1,4 @@
-GitHub Reviewer
+<img height="150" src="https://raw.github.com/auiWorks/GitHub-Reviewer/master/me/image/logo.png">
 ========
 
 A Chrome extension that makes code review easier in GitHub.
