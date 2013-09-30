@@ -14,16 +14,16 @@
         "message"     : "Settings"
     },
     "settings_account" : {
-        "message"     : "Github Account:"
+        "message"     : "Github Personal Access Token:"
     },
     "settings_account_dsc" : {
-        "message"     : "Set these to enable \"Label Management\" in Pull Request pages. Username and password will only be saved locally."
+        "message"     : "Set this to enable \"Label Management\" in Pull Request pages. Token will only be saved locally."
     },
-    "settings_username" : {
-        "message"     : "username"
+    "settings_account_help" : {
+        "message"     : "How to get a token?"
     },
-    "settings_password" : {
-        "message"     : "password"
+    "settings_token" : {
+        "message"     : "Personal Access Token"
     },
     "settings_autoFoldPatterns" : {
         "message"     : "Auto fold file matches one of these patterns:"
