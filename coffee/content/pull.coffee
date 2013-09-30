@@ -27,13 +27,13 @@ helper.params = (key) ->
     arguments.callee.stack[key]
 
 helper.isGitHubAccountSet = () ->
-    setting.local['username'] and setting.local['password']
+    setting.local['token']
 
 helper.api = (options) ->
     return unless helper.isGitHubAccountSet()
 
-    options.url     = 'https://api.github.com' + options.url
-    options.headers = { Authorization : 'Basic ' + window.btoa "#{setting.local['username']}:#{setting.local['password']}" }
+    options.url     = "https://api.github.com#{options.url}"
+    options.headers = { Authorization : "token #{setting.local['token']}" }
     $.ajax options
 
 
