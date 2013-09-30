@@ -20,15 +20,15 @@
     top: 20px
     left: 50%
 
-.repository-sidebar.github-folder--stick
+.repository-sidebar.github-reviewer--stick
     +stick
     margin-left: 452px
-.discussion-sidebar.github-folder--stick
+.discussion-sidebar.github-reviewer--stick
     +stick
     margin-left: 330px
 
 
-.github-folder-blockLabels
+.github-reviewer-blockLabels
     overflow-y: auto
     max-height: 500px
 
@@ -53,9 +53,9 @@
             opacity: 1
 
         &.loading
-            +animation(github-folder-breathing 2s infinite)
+            +animation(github-reviewer-breathing 2s infinite)
 
-+keyframes(github-folder-breathing)
++keyframes(github-reviewer-breathing)
     0%, 100%
         opacity: 1
     50%
