@@ -1,7 +1,7 @@
 GitHub Reviewer
 ========
 
-A Chrome extension that fold files in GitHub Pull Request's "Files Changed" at your preference.
+A Chrome extension that makes code review easier in GitHub.
 
 Run as Chrome Extension:  
 https://chrome.google.com/webstore/detail/github-reviewer/cgkhabhmjiofemilijihohcgbiachdgm
