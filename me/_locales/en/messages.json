@@ -4,7 +4,7 @@
         "description" : "The title of the application, displayed in the web store."
     },
     "appDesc" : {
-        "message"     : "Make code review easier in GitHub.", 
+        "message"     : "Make code review easier in GitHub.",
         "description" : "The description of the application, displayed in the web store."
     },
     "github_fork" : {
@@ -12,18 +12,6 @@
     },
     "settings" : {
         "message"     : "Settings"
-    },
-    "settings_account" : {
-        "message"     : "Github Personal Access Token:"
-    },
-    "settings_account_dsc" : {
-        "message"     : "Set this to enable \"Label Management\" in Pull Request pages. Token will only be saved locally."
-    },
-    "settings_account_help" : {
-        "message"     : "How to get a token?"
-    },
-    "settings_token" : {
-        "message"     : "Personal Access Token"
     },
     "settings_autoFoldPatterns" : {
         "message"     : "Auto fold file matches one of these patterns:"
