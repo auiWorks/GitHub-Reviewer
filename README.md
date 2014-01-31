@@ -14,7 +14,8 @@ Features
 
 Ideas
 ----------------
-* Stars Management
+* File-level review status
+* Enhanced Stars Searching
 
 Usage
 -----
