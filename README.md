@@ -20,6 +20,6 @@ Ideas
 Usage
 -----
 
-1. npm install
-2. grunt
+1. `npm install`
+2. `grunt`
 3. Import "me" folder into Chrome.
